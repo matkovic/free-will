@@ -91,7 +91,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>16.000000</Value>
+					<Value>48.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
@@ -99,7 +99,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>224.000000</Value>
+					<Value>320.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
@@ -124,10 +124,6 @@
 				<Attribute>
 					<Identifier>(0xc46b3d00, 0x3e0454e1)</Identifier>
 					<Value>(0x00000000, 0x00055fbe)</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0xc67a01dc, 0x28ce06c1)</Identifier>
-					<Value></Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0xc73e83ec, 0xf855c5bc)</Identifier>
@@ -259,7 +255,7 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>96.000000</Value>
+					<Value>128.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
@@ -267,7 +263,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>240.000000</Value>
+					<Value>320.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -577,19 +573,19 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1b32c44c, 0x1905e0e9)</Identifier>
-					<Value>39</Value>
+					<Value>71</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x358ae8b5, 0x0f8bacd1)</Identifier>
-					<Value>224</Value>
+					<Value>320</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x3f0a3b27, 0x570913d2)</Identifier>
-					<Value>80</Value>
+					<Value>112</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
-					<Value>240</Value>
+					<Value>320</Value>
 				</Attribute>
 			</Attributes>
 		</Link>
@@ -601,15 +597,22 @@
 			<Text>&lt;u&gt;&lt;b&gt;&lt;big&gt;Overview&lt;/big&gt;&lt;/b&gt;&lt;/u&gt;
 
 This scenario is used to train data for the &quot;free will experiment&quot;.
+See the python scripts for a deeper look into the code.
+
 Main Python script settings are:
-	signals (csv)
-	keyboard stimulations (csv)
-	output file (python pickle) - trained (e.g. ./python-out-[$core{date}-$core{time}].pkl)
-	</Text>
+	&lt;b&gt;Script&lt;/b&gt; - python script for learning and other ML methods
+	&lt;b&gt;InputCSVSignal&lt;/b&gt; - captured EEG signal
+	&lt;b&gt;InputCSVStimulation&lt;/b&gt; - captured keyboard times
+	&lt;b&gt;SaveFile&lt;/b&gt; - if you want to save learning hypotesis into a (python pickle) file (e.g. ./python-out-[$core{date}-$core{time}].pkl)
+	&lt;b&gt;WindowSize (ms)&lt;/b&gt; - size of windows/chunks in milliseconds
+	&lt;b&gt;NumberOfPrevWindows&lt;/b&gt; - number of windows, to be marked as class 1 (just before the button was pressed)
+	&lt;b&gt;NumberOfWindowsBefore&lt;/b&gt; - number of windows, to be marked as class 0 (before those marked as 1)
+	&lt;b&gt;NumberOfWindowsAfter&lt;/b&gt; - number of windows, to be marked as class 0 (after those marked as 1)
+	&lt;b&gt;K-folds&lt;/b&gt; - K-fold cross validation</Text>
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
-					<Value>-96.000000</Value>
+					<Value>-94.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
